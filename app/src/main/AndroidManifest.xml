@@ -14,14 +14,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChooseCategory">
+        <activity android:name=".ChooseCategory"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
         </activity>
         <activity android:name=".RegisterContestant" />
         <activity android:name=".RegisterRecruiter" />
         <activity
             android:name=".LoginActivity"
 
-            android:label="@string/title_activity_login">
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.Design.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
