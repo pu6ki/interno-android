@@ -33,6 +33,9 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+
 import static android.Manifest.permission.READ_CONTACTS;
 
 /**
@@ -200,8 +203,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
     private boolean isEmailValid(String email) {
-        //TODO: Replace this with your own logic
-        return email.contains("@");
+        boolean result = true;
+        try {
+            InternetAddress emailAddr = new InternetAddress(email);
+            emailAddr.validate();
+        } catch (AddressException ex) {
+            result = false;
+        }
+        return result;
     }
 
     private boolean isPasswordValid(String password) {
@@ -316,6 +325,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         @Override
         protected Boolean doInBackground(Void... params) {
             // TODO: attempt authentication against a network service.
+            // Call to site API to authenticate
+
 
             try {
                 // Simulate network access.
