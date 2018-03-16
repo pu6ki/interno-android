@@ -26,5 +26,5 @@
     <string name="register_repassword">Retype Password</string>
     <string name="register_email">Email</string>
     <string name="register_company_name">Company Name</string>
-    <string name="country">Country</string>
+    <string name="register_country">Country</string>
 </resources>
