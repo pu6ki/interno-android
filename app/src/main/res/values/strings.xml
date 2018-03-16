@@ -29,4 +29,10 @@
     <string name="register_login_btn">Done</string>
     <string name="register_company_name">Company Name</string>
     <string name="register_country">Country</string>
+    <string name="title_activity_contest_home">ContestHome</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="profile_string">Profile</string>
+    <string name="companies_string">Companies</string>
 </resources>

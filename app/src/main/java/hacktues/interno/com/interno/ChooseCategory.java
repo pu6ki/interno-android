@@ -15,6 +15,7 @@ public class ChooseCategory extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         setContentView(R.layout.activity_choose_category);
         btnContestant = (Button) findViewById(R.id.btn_contestant);
         btnRecruiter = (Button) findViewById(R.id.btn_recruiter);
@@ -36,5 +37,11 @@ public class ChooseCategory extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }
 }
