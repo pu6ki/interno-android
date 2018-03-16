@@ -104,6 +104,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+        Utils.darkenStatusBar(this, R.color.status_bar_color);
     }
 
     private void populateAutoComplete() {
