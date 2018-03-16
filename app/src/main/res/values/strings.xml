@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Interno</string>
+    <string name="chooseCategory_contestant">Contestant</string>
+    <string name="chooseCategory_recruiter">Recruiter</string>
+</resources>
