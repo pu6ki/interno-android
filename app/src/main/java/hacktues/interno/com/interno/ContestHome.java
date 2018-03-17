@@ -10,18 +10,12 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.view.View;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
 public class ContestHome extends AppCompatActivity {
 
-    private TextView mTextMessage;
     private ListView mListViewContests;
-=======
-
-public class ContestHome extends AppCompatActivity {
->>>>>>> d01806351929ffa5d21d325870d6539b1527734a
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -51,7 +45,6 @@ public class ContestHome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contest_home);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
         mListViewContests = (ListView) findViewById(R.id.lv_home_contests);
 
         ArrayList<Contest> contests = new ArrayList<>();
