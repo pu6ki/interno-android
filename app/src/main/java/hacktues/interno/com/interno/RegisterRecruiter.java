@@ -35,12 +35,12 @@ public class RegisterRecruiter extends AppCompatActivity {
             String repasswordstr = repassword.getText().toString();
             String countrystr = country.getText().toString();
 
-            if(companystr.trim().equals("") || countrystr.trim().equals("") {
+            if(companystr.trim().equals("") || countrystr.trim().equals("")) {
                 Toast blank_error = Toast.makeText(RegisterRecruiter.this, "Fill the empty blank!",
                 Toast.LENGTH_SHORT);
                 blank_error.show();
             }
-            if(!passwordstr.equals(repasswordstr)) {
+            else if(!passwordstr.equals(repasswordstr)) {
                 //popup message
                 Toast pass_error = Toast.makeText(RegisterRecruiter.this, "Passwords don't match!",
                 Toast.LENGTH_LONG);
