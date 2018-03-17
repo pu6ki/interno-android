@@ -7,7 +7,7 @@
     tools:context="hacktues.interno.com.interno.RegisterContestant">
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/register_contestant_username"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
@@ -22,7 +22,7 @@
         app:layout_constraintVertical_bias="0.100" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/register_contestant_email"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
@@ -37,8 +37,8 @@
         app:layout_constraintVertical_bias="0.240" />
 
     <EditText
+        android:id="@+id/register_contestant_password"
         android:inputType = "textPassword"
-        android:id="@+id/editText"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
@@ -53,6 +53,7 @@
         app:layout_constraintVertical_bias="0.380" />
 
     <EditText
+        android:id="@+id/register_contestant_repassword"
         android:inputType = "textPassword"
         android:layout_width="300dp"
         android:layout_height="40dp"
