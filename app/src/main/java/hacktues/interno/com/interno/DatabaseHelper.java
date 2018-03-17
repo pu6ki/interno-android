@@ -36,7 +36,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         this.onCreate(sqLiteDatabase);
     }
 
-    public void insertToken(String token){
+    public void insertToken(String token) {
         sqLiteDatabase = this.getWritableDatabase();
         ContentValues content = new ContentValues();
         content.put(COLUMN_TOKEN, token);

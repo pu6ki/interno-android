@@ -10,15 +10,14 @@ import java.util.Date;
 
 public class Contest {
     int mId;
-    String mCompany;
+    Company mCompany;
     String mTitle;
     String mDescription;
-    long mDeadline;
+    String mDeadline;
     String mPosition;
     String mTechnology;
-    Integer mScore;
 
-    public Contest(int id, String mCompany,String mTitle, String mDescription, long mDeadline, String mPosition, String mTechnology, Integer mScore) {
+    public Contest(int id, Company mCompany,String mTitle, String mDescription, String mDeadline, String mPosition, String mTechnology) {
         this.mId = id;
         this.mCompany = mCompany;
         this.mTitle = mTitle;
@@ -26,10 +25,9 @@ public class Contest {
         this.mDeadline = mDeadline;
         this.mPosition = mPosition;
         this.mTechnology = mTechnology;
-        this.mScore = mScore;
     }
 
-    public String getmCompany(){
+    public Company getmCompany(){
         return mCompany;
     }
 
@@ -43,7 +41,7 @@ public class Contest {
         return mDescription;
     }
 
-    public long getmDeadline() {
+    public String getmDeadline() {
         return mDeadline;
     }
 
@@ -55,11 +53,7 @@ public class Contest {
         return mTechnology;
     }
 
-    public Integer getmScore() {
-        return mScore;
-    }
-
-    public void setmCompany(String mCompany){
+    public void setmCompany(Company mCompany){
         this.mCompany = mCompany;
     }
 
@@ -71,7 +65,7 @@ public class Contest {
         this.mDescription = mDescription;
     }
 
-    public void setmDeadline(long mDeadline) {
+    public void setmDeadline(String mDeadline) {
         this.mDeadline = mDeadline;
     }
 
@@ -81,10 +75,6 @@ public class Contest {
 
     public void setmTechnology(String mTechnology) {
         this.mTechnology = mTechnology;
-    }
-
-    public void setmScore(Integer mScore) {
-        this.mScore = mScore;
     }
 
 }

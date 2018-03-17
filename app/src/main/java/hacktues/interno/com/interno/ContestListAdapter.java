@@ -54,14 +54,14 @@ public class ContestListAdapter extends ArrayAdapter<Contest>{
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         //Get contest information
         Log.d(TAG, "getView started");
-        String company = getItem(position).getmCompany();
+        Company company = getItem(position).getmCompany();
         String title = getItem(position).getmTitle();
-        long deadline = getItem(position).getmDeadline();
+        String deadline = getItem(position).getmDeadline();
         String techPosition = getItem(position).getmPosition();
         String technology = getItem(position).getmTechnology();
 
         //Create the contest
-        Contest contest = new Contest(0 ,company,title, null, deadline, techPosition, technology, null);
+        Contest contest = new Contest(0 ,company,title, null, deadline, techPosition, technology);
 
 
         //View for showing the final contest
@@ -98,10 +98,10 @@ public class ContestListAdapter extends ArrayAdapter<Contest>{
         lastPosition = position;
 
         holder.title.setText(title);
-        holder.companyName.setText(company);
+//        holder.companyName.setText(company);
         holder.techPosition.setText(techPosition);
         holder.technology.setText(technology);
-        holder.deadline.updateShow(deadline);
+//        holder.deadline.updateShow(deadline);
 
         Log.d(TAG, "getView ended");
 
