@@ -31,7 +31,8 @@
             android:name=".ContestHome"
             android:label="@string/title_activity_contest_home" />
         <activity android:name=".Profile" />
-        <activity android:name=".ContestDetails"></activity>
+        <activity android:name=".ContestDetails" />
+        <activity android:name=".CompaniesActivity"></activity>
     </application>
 
 </manifest>
