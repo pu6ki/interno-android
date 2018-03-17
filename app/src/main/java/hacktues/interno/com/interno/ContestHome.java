@@ -8,6 +8,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.view.View;
@@ -34,12 +35,12 @@ public class ContestHome extends AppCompatActivity {
                 case R.id.navigation_companies:
                     return true;
                 case R.id.navigation_home:
+                    intent = new Intent(ContestHome.this, ContestHome.class);
+                    startActivity(intent);
                     return true;
                 case R.id.navigation_profile:
                     intent = new Intent(ContestHome.this, Profile.class);
                     startActivity(intent);
-
-
                     break;
             }
             return false;
@@ -61,7 +62,7 @@ public class ContestHome extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
 
-        Contest contest1 = new Contest("Yes", "Yes", "Yes", 10000000, "Yes","Tech", 20);
+        Contest contest1 = new Contest(1, "Yes", "Yes", "Yes", 10000000, "Yes","Tech", 20);
 
         contests.add(contest1);
         contests.add(contest1);
@@ -101,5 +102,14 @@ public class ContestHome extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+    }
+
+    private void listViewItemListener(){
+        mListViewContests.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
     }
 }
