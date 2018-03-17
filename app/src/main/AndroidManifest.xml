@@ -29,8 +29,9 @@
         <activity android:name=".RegisterContestantPageTwo" />
         <activity
             android:name=".ContestHome"
-            android:label="@string/title_activity_contest_home"></activity>
-        <activity android:name=".Profile"></activity>
+            android:label="@string/title_activity_contest_home" />
+        <activity android:name=".Profile" />
+        <activity android:name=".ContestDetails"></activity>
     </application>
 
 </manifest>
