@@ -6,7 +6,14 @@ package hacktues.interno.com.interno;
 
 public class ContestantInforamtion {
     int id;
-    String username, password, email, first_name, last_name, country, school, website;
+    private String username;
+    private String password;
+    private String email;
+    private String first_name;
+    private String last_name;
+    private String country;
+    private String school;
+    private String website;
 
     public void setId(int id) {
         this.id = id;
