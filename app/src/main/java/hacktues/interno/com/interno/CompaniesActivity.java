@@ -8,11 +8,13 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 public class CompaniesActivity extends AppCompatActivity {
 
     private static final String TAG = "CompaniesActivity";
 
-    private ListView mListViewContests;
+    private ListView mListViewCompanies;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -44,5 +46,16 @@ public class CompaniesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.fadein, R.anim.fadeout);
         setContentView(R.layout.activity_companies);
+
+        mListViewCompanies = (ListView) findViewById(R.id.lv_home_companies);
+
+        ArrayList<Company> companies = new ArrayList<>();
+
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+
+        CompanyListAdapter adapter = new CompanyListAdapter(this, R.layout.adapter_contests_layout, companies);
+        mListViewCompanies.setAdapter(adapter);
     }
 }
