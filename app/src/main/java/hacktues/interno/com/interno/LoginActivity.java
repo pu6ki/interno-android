@@ -91,6 +91,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             @Override
             public void onClick(View view) {
                 //attemptLogin();
+                EditText email = (EditText)findViewById(R.id.email);
+                EditText password = (EditText)findViewById(R.id.password);
+
+                String emailstr = email.getText().toString();
+                String passwordstr = password.getText().toString();
+
                 Intent intent = new Intent(LoginActivity.this, ContestHome.class);
                 startActivity(intent);
             }
