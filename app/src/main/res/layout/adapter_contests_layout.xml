@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@android:color/holo_orange_dark"
     android:orientation="vertical">
-<!--TODO: Choose layout to use for each item in the list view-->
+    <!--TODO: Choose layout to use for each item in the list view-->
+
+    <TextView
+        android:id="@+id/tv_adapter_contest_title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="TITLE USED"
+        android:textColor="@android:color/black"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        tools:text="ASD" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="TextView" />
 </LinearLayout>

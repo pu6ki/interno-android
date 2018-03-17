@@ -9,6 +9,7 @@ import java.util.Date;
  */
 
 public class Contest {
+    String mCompany;
     String mTitle;
     String mDescription;
     Date mDeadline;
@@ -16,13 +17,18 @@ public class Contest {
     String mTechnology;
     Integer mScore;
 
-    public Contest(String mTitle, String mDescription, Date mDeadline, String mPosition, String mTechnology, Integer mScore) {
+    public Contest(String mCompany,String mTitle, String mDescription, Date mDeadline, String mPosition, String mTechnology, Integer mScore) {
+        this.mCompany = mCompany;
         this.mTitle = mTitle;
         this.mDescription = mDescription;
         this.mDeadline = mDeadline;
         this.mPosition = mPosition;
         this.mTechnology = mTechnology;
         this.mScore = mScore;
+    }
+
+    public String getmCompany(){
+        return mCompany;
     }
 
     public String getmTitle() {
@@ -47,6 +53,10 @@ public class Contest {
 
     public Integer getmScore() {
         return mScore;
+    }
+
+    public void setmCompany(String mCompany){
+        this.mCompany = mCompany;
     }
 
     public void setmTitle(String mTitle) {
