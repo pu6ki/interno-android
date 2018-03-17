@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class RegisterContestant extends AppCompatActivity {
 
@@ -23,9 +25,39 @@ public class RegisterContestant extends AppCompatActivity {
         regContestantContinueBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+            EditText username = (EditText)findViewById(R.id.register_contestant_username);
+            EditText email = (EditText)findViewById(R.id.register_contestant_email);
+            EditText password = (EditText)findViewById(R.id.register_contestant_password);
+            EditText repassword = (EditText)findViewById(R.id.register_contestant_repassword);
+
+            String usernamestr = username.getText().toString();
+            String emailstr = email.getText().toString();
+            String passwordstr = password.getText().toString();
+            String repasswordstr = repassword.getText().toString();
+
+            if(usernamestr.trim().equals("") || emailstr.trim().equals("")) {
+                Toast blank_error = Toast.makeText(RegisterContestant.this, "Fill the empty blank!",
+                Toast.LENGTH_SHORT);
+                blank_error.show();
+            }
+            else if(!passwordstr.equals(repasswordstr)) {
+                //popup message
+                Toast pass_error = Toast.makeText(RegisterContestant.this, "Passwords don't match!",
+                Toast.LENGTH_SHORT);
+                pass_error.show();
+            }
+            else {
                 intent = new Intent(RegisterContestant.this, RegisterContestantPageTwo.class);
                 startActivity(intent);
             }
+            }
         });
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }
 }
