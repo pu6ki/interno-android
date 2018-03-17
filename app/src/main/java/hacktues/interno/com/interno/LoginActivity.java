@@ -100,7 +100,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private void sendLoginData(String url, JSONObject credentials){
         RequestQueue requestQueue = Volley.newRequestQueue(LoginActivity.this);
-        System.out.println("BBBBBBBBBBB");
 
         JsonObjectRequest jsonobj = new JsonObjectRequest(
                 Request.Method.POST,
@@ -109,10 +108,16 @@ public class LoginActivity extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        System.out.println("AAAAAAAAAAAAAAA");
-                        System.out.println(response.toString());
-                        Intent intent = new Intent(LoginActivity.this, ContestHome.class);
-                        startActivity(intent);
+                        try {
+                            String token = response.getString("authentication_token");
+                            DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
+                            db.insertToken(token);
+                            db.close();
+                            Intent intent = new Intent(LoginActivity.this, ContestHome.class);
+                            startActivity(intent);
+                        }catch(JSONException e){
+                            e.printStackTrace();
+                        }
                     }
                 },
                 new Response.ErrorListener() {

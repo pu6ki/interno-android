@@ -1,5 +1,6 @@
 package hacktues.interno.com.interno;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -16,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_TOKEN = "token";
     SQLiteDatabase sqLiteDatabase;
 
-    private static final String TABLE_CREATE = "create table " + TABLE_NAME + " token text not null";
+    private static final String TABLE_CREATE = "create table tokens (token text not null);";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -33,5 +34,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String query = "DROP TABLE IF EXISTS " + TABLE_NAME;
         sqLiteDatabase.execSQL(query);
         this.onCreate(sqLiteDatabase);
+    }
+
+    public void insertToken(String token){
+        sqLiteDatabase = this.getWritableDatabase();
+        ContentValues content = new ContentValues();
+        content.put(COLUMN_TOKEN, token);
+        sqLiteDatabase.insert(TABLE_NAME, null, content);
     }
 }
