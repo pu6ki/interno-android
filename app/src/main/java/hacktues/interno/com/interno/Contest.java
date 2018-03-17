@@ -12,12 +12,12 @@ public class Contest {
     String mCompany;
     String mTitle;
     String mDescription;
-    Date mDeadline;
+    long mDeadline;
     String mPosition;
     String mTechnology;
     Integer mScore;
 
-    public Contest(String mCompany,String mTitle, String mDescription, Date mDeadline, String mPosition, String mTechnology, Integer mScore) {
+    public Contest(String mCompany,String mTitle, String mDescription, long mDeadline, String mPosition, String mTechnology, Integer mScore) {
         this.mCompany = mCompany;
         this.mTitle = mTitle;
         this.mDescription = mDescription;
@@ -39,7 +39,7 @@ public class Contest {
         return mDescription;
     }
 
-    public Date getmDeadline() {
+    public long getmDeadline() {
         return mDeadline;
     }
 
@@ -67,7 +67,7 @@ public class Contest {
         this.mDescription = mDescription;
     }
 
-    public void setmDeadline(Date mDeadline) {
+    public void setmDeadline(long mDeadline) {
         this.mDeadline = mDeadline;
     }
 

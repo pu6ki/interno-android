@@ -3,23 +3,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@android:color/holo_orange_dark"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:elevation="2dp"
+
+    android:weightSum="100">
     <!--TODO: Choose layout to use for each item in the list view-->
 
     <TextView
         android:id="@+id/tv_adapter_contest_title"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="0sp"
         android:text="TITLE USED"
-        android:textColor="@android:color/black"
+        android:layout_weight="25"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
         tools:text="ASD" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tv_adapter_company_name"
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:text="TextView" />
+        android:layout_height="0sp"
+        android:text="CompanyName"
+        android:layout_weight="15"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_adapter_position"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:text="Position"
+        android:textAlignment="center"
+        android:layout_weight="25"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_adapter_technologies"
+        android:layout_weight="20"
+        android:layout_height="0sp"
+        android:layout_width="match_parent"
+        android:text="Technologies"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <cn.iwgang.countdownview.CountdownView
+        android:id="@+id/ctdv_adapter_deadline"
+        android:layout_height="0sp"
+        android:layout_width="match_parent"
+        android:layout_weight="10"
+        app:isShowDay="true"
+        app:isShowHour="true"
+        app:isShowMinute="true"
+        app:isShowSecond="false"/>
+
 </LinearLayout>
