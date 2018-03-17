@@ -2,6 +2,7 @@ package hacktues.interno.com.interno;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -41,5 +42,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues content = new ContentValues();
         content.put(COLUMN_TOKEN, token);
         sqLiteDatabase.insert(TABLE_NAME, null, content);
+    }
+
+    public String takeToken() {
+        sqLiteDatabase = this.getReadableDatabase();
+        String query = "select token from tokens limit 1";
+        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+        String extracted = null;
+        if(cursor.moveToNext()) {
+            extracted = cursor.getString(0);
+        }
+        return extracted;
     }
 }

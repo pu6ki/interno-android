@@ -161,9 +161,11 @@ public class ContestHome extends AppCompatActivity {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
                 final Map<String, String> headers = new HashMap<>();
-
+                DatabaseHelper db = new DatabaseHelper(ContestHome.this);
+                String token = db.takeToken();
+                db.close();
                 headers.put("X-User-Email", "recruiter@gmail.com");
-                headers.put("X-User-Token", "iwzUVJt-UUL3_LWny4g5");
+                headers.put("X-User-Token", token);
 
                 headers.put("Content-Type", "application/json");
 
