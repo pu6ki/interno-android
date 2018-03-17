@@ -30,6 +30,10 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="405dp">
+    </RelativeLayout>
         <TextView
             android:layout_width="158dp"
             android:layout_height="26dp"
