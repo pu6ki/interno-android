@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class RegisterRecruiter extends AppCompatActivity {
 
     Button btnRegisterRecruiter;
-
+    Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +35,20 @@ public class RegisterRecruiter extends AppCompatActivity {
             String repasswordstr = repassword.getText().toString();
             String countrystr = country.getText().toString();
 
-            if(!password.equals(repassword)) {
+            if(companystr.trim().equals("") || countrystr.trim().equals("") {
+                Toast blank_error = Toast.makeText(RegisterRecruiter.this, "Fill the empty blank!",
+                Toast.LENGTH_SHORT);
+                blank_error.show();
+            }
+            if(!passwordstr.equals(repasswordstr)) {
                 //popup message
                 Toast pass_error = Toast.makeText(RegisterRecruiter.this, "Passwords don't match!",
                 Toast.LENGTH_LONG);
                 pass_error.show();
+            }
+            else {
+                intent = new Intent(RegisterRecruiter.this, ContestHome.class);
+                startActivity(intent);
             }
             }
         });
