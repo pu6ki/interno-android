@@ -19,6 +19,8 @@ public class RegisterContestant extends AppCompatActivity {
         btnListener();
     }
 
+
+
     public void btnListener(){
         regContestantContinueBtn.setOnClickListener(new View.OnClickListener() {
             @Override

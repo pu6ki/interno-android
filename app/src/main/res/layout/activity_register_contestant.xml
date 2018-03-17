@@ -37,6 +37,7 @@
         app:layout_constraintVertical_bias="0.240" />
 
     <EditText
+        android:inputType = "textPassword"
         android:id="@+id/editText"
         android:layout_width="300dp"
         android:layout_height="40dp"
@@ -52,6 +53,7 @@
         app:layout_constraintVertical_bias="0.380" />
 
     <EditText
+        android:inputType = "textPassword"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginBottom="8dp"
