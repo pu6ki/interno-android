@@ -21,7 +21,7 @@
 
     <include layout="@layout/bottom_navigation_view"
              android:layout_width="match_parent"
-             android:layout_height="wrat_content"
+             android:layout_height="wrap_content"
              android:layout_gravity="bottom"></include>
 
 
